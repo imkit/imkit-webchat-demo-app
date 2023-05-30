@@ -76,11 +76,10 @@ class ViewController: UIViewController {
                 
                 // Create a direct chat room
                 let task = IMCreateDirectChatTask()
-                let roomName: String? = "Room Name"
                 let coverURL: URL? = URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1200px-ChatGPT_logo.svg.png")
                 let invitee: String = "ho2"
                 
-                task.perform(token: token, roomName: roomName, coverURL: coverURL, invitee: invitee) { result in
+                task.perform(token: token, coverURL: coverURL, invitee: invitee) { result in
                     switch result {
                     case .success(let response):
                         print("Created room: \(response.result._id)")

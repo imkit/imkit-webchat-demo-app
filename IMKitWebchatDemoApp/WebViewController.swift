@@ -15,7 +15,6 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     init(roomId: String, token: String) {
         super.init(nibName: nil, bundle: nil)
         url = URL(string: "https://imkit-vue-sdk.web.app/#/?roomId=\(roomId)&token=\(token)")
-        print(url)
     }
     
     required init?(coder: NSCoder) {

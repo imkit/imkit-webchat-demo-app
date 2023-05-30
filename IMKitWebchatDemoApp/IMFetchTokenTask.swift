@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import LoremSwiftum
 
 struct IMFetchTokenTaskResponse: Codable {
     let result: Result
@@ -33,7 +33,7 @@ class IMFetchTokenTask {
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("fangho_imkit_0412_2018_001_clientkey", forHTTPHeaderField: "IM-CLIENT-KEY")
-        let parameters = ["id": uid]
+        let parameters = ["id": uid, "nickname": Lorem.fullName]
         do {
             let data = try JSONEncoder().encode(parameters)
             request.httpBody = data
