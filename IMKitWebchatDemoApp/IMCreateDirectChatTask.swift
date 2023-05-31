@@ -55,7 +55,8 @@ class IMCreateDirectChatTask {
             "description": description ?? "",
             "invitee": invitee,
             "systemMessage": isSystemMessageEnabled,
-            "roomType": "direct"
+            "roomType": "direct",
+            "webhook": "https://imkit.nexdoor.cc"
         ]
         do {
             let data = try JSONSerialization.data(withJSONObject: parameters, options: [])
